@@ -1,0 +1,4 @@
+apps		 deleteme.txt  LICENSE		   README-EXAMPLES.md
+CONTRIBUTING.md  dev	       Makefile.include    README.md
+core		 doc	       platform		   regression-tests
+cpu		 examples      README-BUILDING.md  tools
