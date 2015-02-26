@@ -58,7 +58,7 @@
 
 #include "common_ipsec.h"
 #include "sa.h"
-#include "net/uip.h"
+#include "net/ip/uip.h"
 
 // The number of entries in spd_table. Adjust according to need.
 #define SPD_ENTRIES 6

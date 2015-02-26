@@ -47,7 +47,7 @@
   *
   */
 #include <lib/list.h>
-#include <net/uip.h>
+#include <net/ip/uip.h>
 #include "ipsec_malloc.h"
 #include "sad.h"
 #include "spd.h"

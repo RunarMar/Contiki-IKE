@@ -50,8 +50,8 @@
 // test start
 
 //#include "border-router.h"
-#include "net/uip-ds6.h"
-#include "net/uip.h"
+#include "net/ipv6/uip-ds6.h"
+#include "net/ip/uip.h"
 
 PROCESS(ipsec_example_process, "IPsec Example");
 

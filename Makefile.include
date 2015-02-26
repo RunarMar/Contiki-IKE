@@ -94,7 +94,7 @@ ifeq ($(CONTIKI_WITH_IPV6),1)
 endif
 
 # TODO: RMM reconsider includes defined bellow
-ifdef UIP_CONF_IPV6
+ifeq ($(CONTIKI_WITH_IPV6),1)
 	# IPsec Makefiles
 	CONTIKI_ECC_DIR = $(CONTIKI)/core/lib/contikiecc
 
@@ -118,7 +118,7 @@ CONTIKI_SOURCEFILES += $(CONTIKIFILES)
 
 CONTIKIDIRS += ${addprefix $(CONTIKI)/core/,dev lib net net/llsec net/mac net/rime \
                  net/rpl net/ipsec net/ipsec/ike net/ipsec/transforms lib/hmac-sha1 \
-                 sys cfs ctk lib/ctk loader . }
+                 lib/contikiecc sys cfs ctk lib/ctk loader . }
 
 oname = ${patsubst %.c,%.o,${patsubst %.S,%.o,$(1)}}
 

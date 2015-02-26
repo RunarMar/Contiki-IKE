@@ -168,7 +168,7 @@ MIRACL510.ZIP - Version 5.10
   */
 
 #include <stdlib.h>
-#include "net/uip.h"
+#include "net/ip/uip.h"
 #include "aes-moo.h"
 
 #define mr_utype int

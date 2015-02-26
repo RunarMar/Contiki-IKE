@@ -77,12 +77,12 @@ send_buffer(struct uip_udp_conn *c)
 #if UIP_UDP
   uip_udp_conn = c;
   uip_process(UIP_UDP_SEND_CONN);
-#if UIP_CONF_IPV6
-  tcpip_ipv6_output();
+#if NETSTACK_CONF_WITH_IPV6
+    tcpip_ipv6_output();
 #else
-  if(uip_len > 0) {
-    tcpip_output();
-  }
+    if(uip_len > 0) {
+      tcpip_output();
+    }
 #endif /* UIP_CONF_IPV6 */
   uip_slen = 0;
 #endif /* UIP_UDP */

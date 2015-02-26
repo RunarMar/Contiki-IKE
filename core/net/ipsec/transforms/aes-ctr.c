@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "sa.h"
-#include "net/uip.h"
+#include "net/ip/uip.h"
 #include "encr.h"
 #include "ipsec.h"
 #include "transforms/aes-moo.h"

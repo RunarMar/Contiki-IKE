@@ -7,7 +7,7 @@
  */
 
 #include <string.h>
-#include "net/uip.h"
+#include "net/ip/uip.h"
 #include "sa.h"
 #include "ipsec.h"
 #include "common_ipsec.h"

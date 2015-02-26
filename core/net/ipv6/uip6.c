@@ -93,7 +93,7 @@
 /* For Debug, logging, statistics                                            */
 /*---------------------------------------------------------------------------*/
 
-#define DEBUG DEBUG_NONE
+#define DEBUG PRINT
 #include "net/ip/uip-debug.h"
 
 // IPsec stuff start
@@ -405,7 +405,7 @@ upper_layer_chksum(uint8_t proto)
   PRINTF("Upper layer checksum len: %d from: %d\n", upper_layer_len,
 	 UIP_IPH_LEN + UIP_LLH_LEN + uip_ext_len);
   
-  IPSECDBG_PRINTF("Upper layer checksum len: %d from: %d, proto: %u\n", upper_layer_len,
+  IPSECDBG_PRINTF("IPsec Upper layer checksum len: %d from: %d, proto: %u\n", upper_layer_len,
 	  UIP_IPH_LEN + UIP_LLH_LEN, proto);
 
   /* First sum pseudoheader. */

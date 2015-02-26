@@ -47,7 +47,7 @@
 
 
 #include <limits.h>
-#include "net/uip.h"
+#include "net/ip/uip.h"
 #include "ipsec.h"
 #include "ike/payload.h"
 

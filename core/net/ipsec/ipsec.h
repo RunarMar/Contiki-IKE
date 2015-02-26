@@ -15,7 +15,7 @@
 #define __IPSEC_H__
 
 #include <contiki-conf.h>
-#include "net/uip.h"
+#include "net/ip/uip.h"
 
 #if WITH_CONF_IPSEC_AH
 #define WITH_IPSEC_AH     WITH_CONF_IPSEC_AH
