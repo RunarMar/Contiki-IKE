@@ -93,6 +93,20 @@ ifeq ($(CONTIKI_WITH_IPV6),1)
   MODULES += core/net/ipv6 core/net/ip
 endif
 
+# TODO: RMM reconsider includes defined bellow
+ifdef UIP_CONF_IPV6
+	# IPsec Makefiles
+	CONTIKI_ECC_DIR = $(CONTIKI)/core/lib/contikiecc
+
+	include $(CONTIKI)/core/net/ipsec/Makefile.ipsec
+	include $(CONTIKI)/core/net/ipsec/ike/Makefile.ike
+	include $(CONTIKI)/core/net/ipsec/transforms/Makefile.transforms
+	include $(CONTIKI_ECC_DIR)/Makefile.contikiecc
+	include $(CONTIKI_ECC_DIR)/curve-params/Makefile.curve_params
+	include $(CONTIKI)/core/lib/hmac-sha1/Makefile.hmac-sha1
+	# end IPsec
+endif # UIP_CONF_IPV6
+
 ifeq ($(CONTIKI_WITH_RPL),1)
     CFLAGS += -DUIP_CONF_IPV6_RPL=1
     MODULES += core/net/rpl
@@ -103,7 +117,8 @@ endif
 CONTIKI_SOURCEFILES += $(CONTIKIFILES)
 
 CONTIKIDIRS += ${addprefix $(CONTIKI)/core/,dev lib net net/llsec net/mac net/rime \
-                 net/rpl sys cfs ctk lib/ctk loader . }
+                 net/rpl net/ipsec net/ipsec/ike net/ipsec/transforms lib/hmac-sha1 \
+                 sys cfs ctk lib/ctk loader . }
 
 oname = ${patsubst %.c,%.o,${patsubst %.S,%.o,$(1)}}
 

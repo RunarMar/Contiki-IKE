@@ -45,9 +45,10 @@
 #include <string.h>
 #include "net/ipv6/uip-ds6.h"
 #include "net/ipv6/uip-icmp6.h"
+#include "ipsec.h"
 #include "contiki-default-conf.h"
 
-#define DEBUG 0
+#define DEBUG 1
 #if DEBUG
 #include <stdio.h>
 #define PRINTF(...) printf(__VA_ARGS__)
